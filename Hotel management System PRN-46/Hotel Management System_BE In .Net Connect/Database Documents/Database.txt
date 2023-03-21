@@ -1,0 +1,68 @@
+create database hotelmanagementsystemef;
+
+use hotelmanagementsystemef;
+
+create table UserDetail(
+UserId int auto_increment primary key,
+InsertionDate varchar(50),
+UserName varchar(255),
+PassWord varchar(255),
+Role varchar(64),
+IsActive bit default 1
+);
+
+CREATE TABLE CustomerDetails(
+CustomerID  int  auto_increment primary key,
+InsertionDate varchar(50),
+RoomType varchar (50),
+RoomScenerio varchar(50),
+RoomPrice int,
+CustomerName varchar(255),
+Contact varchar(10),
+EmailID varchar(255),
+Address varchar(511),
+Age int,
+CheckInTime varchar (50),
+CheckOutTime varchar (50),
+IDProof varchar (50),
+IDNumber varchar(100),
+PinCode varchar(10),
+IsActive bit,
+IsPaid bit
+);
+
+
+
+CREATE TABLE fact_master_details (
+MasterId int auto_increment primary key,
+MasterUserName   varchar (255),
+MasterPassword   varchar (255),
+Role   varchar (10),
+InsertionDate   datetime,
+TotalRoom   int ,
+AvailableRoom   int   ,
+TotalAcRoom   int   ,
+AvailableAcRoom   int   ,
+TotalSingleBedAcRoom   int   ,
+AvailableSingleBedAcRoom   int   ,
+SingleBedAcRoomPrice   int   ,
+TotalDoubleBedAcRoom   int   ,
+AvailableDoubleBedAcRoom   int   ,
+DoubleBedAcRoomPrice   int   ,
+TotalNonAcRoom   int   ,
+AvailableNonAcRoom   int   ,
+TotalSingleBedNonAcRoom   int   ,
+AvailableSingleBedNonAcRoom   int   ,
+SingleBedNonAcRoomPrice   int   ,
+TotalDoubleBedNonAcRoom   int   ,
+AvailableDoubleBedNonAcRoom   int   ,
+DoubleBedNonAcRoomPrice   int   ,
+IsActive bit default 1  
+); 
+
+
+CREATE TABLE FeedbackDetail(
+FeedbackID int auto_increment primary key,
+FeedBack varchar (255)
+);
+
